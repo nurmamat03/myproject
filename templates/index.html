@@ -1,0 +1,155 @@
+{%load static%}
+<!DOCTYPE html>
+<!--
+	Rocket Internet by TEMPLATE STOCK
+	templatestock.co @templatestock
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+	<title>Rocket Internet by TEMPLATE STOCK</title>
+
+	<!-- Bootstrap CSS -->
+	<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" >
+
+	<!-- Goggle Font -->
+	<link href='{% static "https://fonts.googleapis.com/css?family=Lato:400,700,900,300" %}' rel='stylesheet' type='text/css'>
+
+	<!-- Font Css -->
+	<link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" type="text/css" >
+
+	<!-- Custom CSS -->
+	<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" >
+
+	<!-- Animation Css -->
+	<link href="{% static 'css/animate.css' %}" rel="stylesheet" >
+
+</head>
+<body>
+<header>
+	<div id="homeFullScreen" style="height: 242px; weight: 1047px;">
+		<div class="header-text">
+			<h1>ИНФОРМАЦИОННЫЙ БЛОГ О ПРОГРАММИСТАХ,
+				ВЫ МОЖЕТЕ ЗДЕСЬ УВИДИТ МАЛУЮ ИНФОРМАЦИЮ О ПРОГРАММИСТАХ,
+			КТО ТАКОЙ FRONTEND DEVELOPER И BACKEND DEVELOPER.</h1>
+			<div class="vertical-line"></div>
+			<p>
+				Программи́ст — специалист, занимающийся программированием,
+				</br>
+				то есть созданием компьютерных программ.
+			</p>
+		</div><!-- End HeaderText -->
+	</div><!-- End homeFullScreen -->
+</header><!-- End Header -->
+
+<!-- Feature -->
+{% block content %}
+<section class="feature">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-6">
+				<div class="feature-box">
+					<h1>BACKEND DEVELOPER</h1>
+					<p>Бэк-энд разработчик (с англ. back-end (оборотная сторона) developer) — это специалист, который занимается программно-административной частью веб-приложения, внутренним содержанием системы,
+						серверными технологиями — базой данных, архитектурой, программной логикой.</p>
+				</div>
+			</div><!-- End col-md-6 -->
+			      {% for i in images%}
+
+			<div class="clearfix"></div><!-- End clearfix -->
+
+
+			<div class="col-md-6 col-sm-6 nopadding">
+				<img src="{{i.image.url}}">
+			</div>
+			      {% endfor %}
+
+			<div class="col-md-6 col-sm-6">
+				<div class="feature-box">
+					<h1>FRONTEND DEVELOPER</h1>
+					<p>front-end разработка — это создание клиентской части сайта. Front-end разработчик занимается версткой шаблона сайта и созданием пользовательского интерфейса. Обычно front-end разработчик — это мастер на все руки. Он просто обязан обладать талантом дизайнера,
+						быть искусным верстальщиком и хорошим программистом.</p>
+				</div>
+			</div><!-- End col-md-6 -->
+		</div>
+	</div>
+</section>
+
+<!-- portfolio -->
+
+<section class="portfolio">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1 class="heading">Portfolio</h1>
+			</div><!-- End col-md-12 -->
+			      {% for i in img%}
+
+			<div class="col-md-4 col-sm-4">
+				<img src="{{i.img.url}}">
+			</div><!-- End col-md-4 -->
+			      {% endfor %}
+
+			<div class="clearfix"></div><!-- End clearfix -->
+
+		</div>
+	</div><!-- End container -->
+</section><!-- Call to Action -->
+<section class>
+</section>
+<section class="call-top-action text-center">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>БИОГРАФИЯ СОЗДАТЕЛЯ PYTHON</h1>
+				<p>Гвидо ван Россум — голландский программист, прежде всего известный как автор языка программирования Python. Википедия
+Дата и место рождения: 31 января 1956 г. (возраст 65 лет), Харлем, Нидерланды
+Супруга: Ким Напп (в браке с 2000 г.)
+Награда: Free Software Award (2001 г.)
+Дети: Орлейн Михил Напп-Ван Россум
+Братья: Джаст ван Россум
+Образование: Амстердамский университет (1982 г.), Stedelijk Gymnasium Haarlem</p>
+				<span>МАМАТСАКОВ НУРМАМАТ😎</span>
+			</div><!-- End col-md-12 -->
+		</div><!-- End row -->
+	</div><!-- End container -->
+</section>
+  {% endblock %}
+
+
+<!-- Footer -->
+<footer>
+	<ul class="in-line">
+		<li><a href="https://www.facebook.com/"><span><i class="fa fa-facebook"></i></span></a></li>
+		<li><a href="https://twitter.com/?lang=ru"><span><i class="fa fa-twitter"></i></span></a></li>
+		<li><a href="https://www.youtube.com/watch?v=kXfOWLLN9k4"><span><i class="fa fa-youtube"></i></span></a></li>
+	</ul>
+	<span class="copyright">&#169; Untitled . All rights reserved. Design By <a href="http://templatestock.co">Templatestock.co</a></span>
+</footer>
+	
+
+
+
+<!-- Main JS -->
+<script src="{% static 'js/jquery-main.js' %}" type="text/javascript" ></script>
+
+<!-- Bootstrap JS -->
+<script src="{% static 'js/bootstrap.min.js' %}" type="text/javascript" ></script>
+
+<!-- Animation JS -->
+<script src="{% static 'js/wow.min.js' %}" type="text/javascript" ></script>
+
+<!-- Custom JS -->
+<script src="{% static 'js/custom.js' %}" type="text/javascript" ></script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
